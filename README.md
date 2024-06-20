@@ -28,10 +28,10 @@ heat-loss grid shown below.
 4322674655533
 ```
 
-The elf puzzle is a classic $A^{*}$ optimisation problem. The possible
+The elf puzzle is a classic *A*<sup>\*</sup> optimisation problem. The possible
 routes form a graph of nodes. Arcs between nodes have a cost metric.
 Higher values represent a higher cost of traversing between nodes. The
-$A^{*}$ optimiser walks the graph looking for the path with the lowest
+*A*<sup>\*</sup> optimiser walks the graph looking for the path with the lowest
 total cost.
 
 Deriving a solution requires the solving of multiple sub-problems. The
@@ -164,7 +164,7 @@ test(it, [A == v, nondet]) :- go(1-1, A, 1-2).
 :- end_tests(direction).
 ```
 
-Next, the elves $A^{*}$-traverse the cost grid.
+Next, the elves *A*<sup>\*</sup>-traverse the cost grid.
 
 ## A-star traversal
 
@@ -174,8 +174,8 @@ it with expanded nodes. Rinse repeat until one of the expanded nodes
 matches the final node. Taking the lowest score prefers finding the
 least-cost route.
 
-Given a *priority heap*, the implementation of $A^{*}$ becomes simple. See
-the listing below. You create an initial $A^{*}$ heap given a starting
+Given a *priority heap*, the implementation of *A*<sup>\*</sup> becomes simple. See
+the listing below. You create an initial *A*<sup>\*</sup> heap given a starting
 score and node, see `a_star_initial/3`. The node is any term used to
 identify a location in a graph. You ask for a “final” node by removing
 the one with the lowest score, see `a_star_final/4`. The lowest-scoring
@@ -224,7 +224,7 @@ Heap expansion appears in two steps. The two-step
 the expanded nodes based on a given $Node$. The result is a list of
 $Score-Node$ pairs. Expansion occurs if the “final” heap does **not**
 match the final node requirements, i.e. not the node we were searching
-for. Nothing stops $A^{*}$ from continuing a search to find alternative
+for. Nothing stops *A*<sup>\*</sup> from continuing a search to find alternative
 routes.
 
 ## Elven wisdom
@@ -295,7 +295,7 @@ Score = 102
 The `elven_star` predicate solves non-deterministically. It delivers the
 best solution first but thereafter continues searching for other
 solutions if the user backtracks by pressing semicolon (`;`) to redo the
-predicate. Indeed, it continues non-deterministically until the $A^{*}$
+predicate. Indeed, it continues non-deterministically until the *A*<sup>\*</sup>
 heap drains to nothing, producing successively worse but plausible
 solutions along the way.
 
@@ -319,7 +319,7 @@ Heat loss of $102$ in about three minutes. Clever elves.
 
 ## Post-mortem
 
-$A^{*}$ has its limitations. It is **not** a magic bullet. The priority
+*A*<sup>\*</sup> has its limitations. It is **not** a magic bullet. The priority
 heap quickly grows. Unless the host machine has unlimited amounts of
 memory, the solution will inevitably hit out-of-memory unless node
 expansion applies constraints. Expansion requires *some* amount of
