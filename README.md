@@ -105,7 +105,7 @@ Next, access the grid by row and column.
 
 ## Cost of heat loss
 
-Look up the $x$th cost within the $y$th grid row given a grid of costs
+Look up the *x*th cost within the *y*th grid row given a grid of costs
 and an `X-Y` term. See the implementation below with a simple test.
 
 ``` prolog
