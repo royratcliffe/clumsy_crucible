@@ -37,11 +37,6 @@ total cost.
 Deriving a solution requires the solving of multiple sub-problems. The
 following sections take them individually, starting with the grid parser
 and ending with heuristic tuning. I include a suite of tests, one for
-each stage for a test-driven approach using Programming Logic.
-
-The solution requires the solving of multiple sub-problems. The
-following sections take them individually, starting with the grid parser
-and ending with heuristic tuning. I include a suite of tests, one for
 each stage for a test-driven approach using [Programming
 Logic](https://www.swi-prolog.org/).
 
